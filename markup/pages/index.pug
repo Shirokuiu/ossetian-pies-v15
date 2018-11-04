@@ -1,0 +1,288 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  include ../components/img/img.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          div.t
+            .container
+              ul
+                each items, index in ['Москва','Москва, Большой Каретный, 2','Бесплатная доставка по Москве','Оплата наличными и по карте','Звоните с Пн-Вс 9:00 - 21:00']
+                  li
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: 'page-header-top' + (index + 1) , className: 'icon'})
+                    p= items
+          div.m
+            .container
+              button.btn(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'menu', className: 'icon'})
+              div.logo
+                div.image
+                  +img('chakra.svg')
+                div.text
+                  h2 Пироги от Осетин
+                  p НАСТОЯЩИЕ ОСЕТИНСКИЕ ПИРОГИ
+              ul.inf
+                each items in [{icon:'factory',text:'О компании',sell:false},{icon:'sales',text:'Акции',sell:true},{icon:'chat',text:'Отзывы',sell:false},{icon:'purse',text:'Оплата',sell:false},{icon:'boxes',text:'Доставка',sell:false},{icon:'phone-book',text:'Контакты',sell:false}]
+                  li(class="" + (items.sell ? 'sell' : ''))
+                    a(href="#")
+                      span
+                        != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                      p= items.text
+              div.basket
+                a(href="#")
+                  span.count 0
+                  span.itm
+                    != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
+              div.tel
+                span
+                  != pugHelpers.Icon.call(locals, {iconName: 'phone-call', className: 'icon'})
+                a(href="tel:+74956496451") +7 495 649-64-51
+          div.b
+            button.exit(type="exit")
+            .container
+              nav
+                ul
+                  each items in ['С говядиной','С курицей','С капустой','С сыром','С картошкой','С рыбой','Сладкие','Постные','Традиционные']
+                    li
+                      a(href="#")
+                        span
+                        p= items
+        main.page-content
+          .popular-goods
+            .container
+              .popular-goods__slider-wrap
+                span.sell-notice Бесплатная доставка в Москве
+                .my-title.my-title--only-title
+                  .my-title__head-wrap
+                    h2 Осетинские пироги из пекарни «Пироги от Осетин»
+                .popular-goods__slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 12; i++)
+                    .popular-goods__slider-slide
+                      .good.good--slider
+                        a.headline(href="#") Осетинский пирог с говядиной
+                        div.fotorama-wrap
+                          p.count
+                          .fotorama(data-nav="thumbs" data-thumbwidth="65" data-thumbheight="40" data-thumbmargin="18" data-swipe="false")
+                            - for (let i = 0; i < 3; i++)
+                              img(src="%=static=%img/content/good-img" + (i + 1) + '.jpg' alt="Картинка")
+                        div.cont
+                          div.block-left
+                            div.options
+                              div.weight
+                                h3 Вес:
+                                div.weight-block
+                                  p
+                                    span
+                                      != pugHelpers.Icon.call(locals, {iconName: 'down-arrow', className: 'icon'})
+                                  ul(data-old-price="true")
+                                    li(data-weight="800 г" data-price="400" data-old-price="550")
+                                    li.active(data-weight="1000 г" data-price="550" data-old-price="750")
+                                    li(data-weight="1200 г" data-price="750" data-old-price="950")
+                              div.calculate
+                                h3 Кол-во:
+                                div.calculate-block
+                                  button.minus(type="button")
+                                  p 1
+                                  button.plus(type="button")
+                            div.price
+                              p.old-price
+                                span
+                                | руб.
+                              p.current-price 
+                                span
+                                | руб.
+                          button.add(type="button")
+                            span
+                              != pugHelpers.Icon.call(locals, {iconName: 'add-good', className: 'icon'})
+          .my-title
+            .container
+              p Пекарня «Пироги от Осетин» предлагает заказать и купить осетинские пироги в Москве с доставкой на дом и в офис. Традиционные осетинские пироги - это блюдо, вкус которого запоминается с первого раза и навсегда! Неповторимый аромат специй, нежная текстура сыров, сочное мясо и, тающее во рту, ароматное тесто – все это в сочетании делает наши пироги настоящим кулинарным шедевром. Курьеры везут пироги только по одному адресу, поэтому вероятность их задержки в пути сводится к минимуму. При условии покупки выпечки на сумму от 1000 рублей доставка осетинских пирогов по Москве выполняется бесплатно.
+                span.icon1
+          .my-title
+            .container
+              .my-title__head-wrap
+                h2 Осетинские пироги с капустой
+          .page-content__goods-row
+            .container
+              - for (let i = 0; i < 3; i++)
+                .good.good--index
+                  a.headline(href="#") Осетинский пирог с говядиной
+                  div.fotorama-wrap
+                    p.count
+                    .fotorama(data-nav="thumbs" data-thumbwidth="65" data-thumbheight="40" data-thumbmargin="18" data-swipe="false")
+                      - for (let i = 0; i < 3; i++)
+                        img(src="%=static=%img/content/good-img" + (i + 1) + '.jpg' alt="Картинка")
+                  div.cont
+                    div.block-left
+                      div.options
+                        div.weight
+                          h3 Вес:
+                          div.weight-block
+                            p
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'down-arrow', className: 'icon'})
+                            ul(data-old-price="true")
+                              li(data-weight="800 г" data-price="400" data-old-price="550")
+                              li.active(data-weight="1000 г" data-price="550" data-old-price="750")
+                              li(data-weight="1200 г" data-price="750" data-old-price="950")
+                        div.calculate
+                          h3 Кол-во:
+                          div.calculate-block
+                            button.minus(type="button")
+                            p 1
+                            button.plus(type="button")
+                      div.price
+                        p.old-price
+                          span
+                          | руб.
+                        p.current-price 
+                          span
+                          | руб.
+                    button.add(type="button")
+                      span
+                        != pugHelpers.Icon.call(locals, {iconName: 'add-good', className: 'icon'})
+          .sell-carts
+            .my-title
+              .container
+                .my-title__head-wrap.my-title__head-wrap--sell
+                  h2 Акции и скидки на осетинские пироги!
+            .container
+              .sell-carts__slider-wrap
+                span.sell-notice Скидка в день рождения -10%
+                .sell-carts__slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 12; i++)
+                    .sell-carts__slider-slide
+                      a(href='#') Осетинский пирог с говядиной
+                      div.img
+                        +img('sell-img.jpg')
+                        span.icon1
+                        button(type="button") В корзину
+                          span
+                            != pugHelpers.Icon.call(locals, {iconName: 'sell-button', className: 'icon'})
+                      div.cont
+                        div.weight
+                          h3 Вес:
+                          div.weight-block
+                            p
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'down-arrow', className: 'icon'})
+                            ul
+                              li(data-weight="800 г" data-price="400")
+                              li.active(data-weight="1000 г" data-price="550")
+                              li(data-weight="1200 г" data-price="750")
+                        div.price
+                          h3 Цена со скидкой:
+                          p
+                            span
+                            | руб.
+          .my-title
+            .container
+              p Пекарня «Пироги от Осетин» предлагает заказать и купить осетинские пироги в Москве с доставкой на дом и в офис. Традиционные осетинские пироги - это блюдо, вкус которого запоминается с первого раза и навсегда! Неповторимый аромат специй, нежная текстура сыров, сочное мясо и, тающее во рту, ароматное тесто – все это в сочетании делает наши пироги настоящим кулинарным шедевром. Курьеры везут пироги только по одному адресу, поэтому вероятность их задержки в пути сводится к минимуму. При условии покупки выпечки на сумму от 1000 рублей доставка осетинских пирогов по Москве выполняется бесплатно.
+                span.icon2
+          .my-title.my-title--only-title
+            .container
+              .my-title__head-wrap
+                h2 Осетинские пироги с капустой
+          .page-content__goods-row
+            .container
+              - for (let i = 0; i < 6; i++)
+                .good.good--index
+                  a.headline(href="#") Осетинский пирог с говядиной
+                  div.fotorama-wrap
+                    p.count
+                    .fotorama(data-nav="thumbs" data-thumbwidth="65" data-thumbheight="40" data-thumbmargin="18" data-swipe="false")
+                      - for (let i = 0; i < 3; i++)
+                        img(src="%=static=%img/content/good-img" + (i + 1) + '.jpg' alt="Картинка")
+                  div.cont
+                    div.block-left
+                      div.options
+                        div.weight
+                          h3 Вес:
+                          div.weight-block
+                            p
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'down-arrow', className: 'icon'})
+                            ul(data-old-price="true")
+                              li(data-weight="800 г" data-price="400" data-old-price="550")
+                              li.active(data-weight="1000 г" data-price="550" data-old-price="750")
+                              li(data-weight="1200 г" data-price="750" data-old-price="950")
+                        div.calculate
+                          h3 Кол-во:
+                          div.calculate-block
+                            button.minus(type="button")
+                            p 1
+                            button.plus(type="button")
+                      div.price
+                        p.old-price
+                          span
+                          | руб.
+                        p.current-price 
+                          span
+                          | руб.
+                    button.add(type="button")
+                      span
+                        != pugHelpers.Icon.call(locals, {iconName: 'add-good', className: 'icon'})
+          .page-content__order
+            .container
+              ul
+                each items in ['Акция в день рождения -10%','Бесплатная доставка','Оплата наличными и по карте','Скидки постоянным клиентам']
+                  li= items
+              a(href="#") Заказать пироги
+                span
+                  != pugHelpers.Icon.call(locals, {iconName: 'right-arrow', className: 'icon'})
+      footer.page-footer
+        .footer-content
+          div.t
+            .container
+              div.logo
+                div.img
+                  +img('chakra.svg')
+                div.text
+                  h2 Пироги от Осетин
+                  p НАСТОЯЩИЕ ОСЕТИНСКИЕ ПИРОГИ
+                  ul
+                    - for (let i = 0; i < 7; i++)
+                      li
+                        a(href="#")
+              ul.info
+                each items in [{icon:'factory',text:'О компании'},{icon:'sales',text:'Акции'},{icon:'chat',text:'Отзывы'},{icon:'purse',text:'Оплата'},{icon:'boxes',text:'Доставка'},{icon:'phone-book',text:'Контакты'}]
+                  li
+                    a(href="#")
+                      span
+                        != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                      p= items.text
+              div.tel
+                span
+                  != pugHelpers.Icon.call(locals, {iconName: 'phone-call', className: 'icon'})
+                a(href="tel:+74956496451") +7 495 649-64-51
+          div.m
+            .container
+              ul
+                each items, index in ['Москва, Большой Каретный, 2','Бесплатная доставка по Москве','Оплата наличными и по карте','Звоните с Пн-Вс 9:00 - 21:00']
+                  li
+                    span
+                      != pugHelpers.Icon.call(locals, {iconName: 'page-header-top' + (index + 2) , className: 'icon'})
+                    p= items
+          div.b
+            .container
+              div.ym
+                +img('yandex-metrika.jpg')
+              div.dev
+                a(href="#")
+                  p Создание и продвижение сайта
+                  span
+                  
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

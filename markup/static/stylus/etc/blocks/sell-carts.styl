@@ -1,0 +1,244 @@
+.sell-carts
+  bgi('sell-bg.png')
+  
+  padding-top: 60px;
+  
+  background-repeat no-repeat
+  background-size: 690px auto;
+  background-position: 47% -6px;
+  
+.sell-carts__slider-wrap
+  position relative
+  
+  margin-bottom: -68px;
+  .sell-notice
+    font('Raleway', 28px, 900, #FFFFFF)
+    
+    position absolute
+    right 0
+    bottom 24%
+    
+    display block
+    min-width 630px
+    padding: 4px 0;
+    
+    letter-spacing 1px
+    text-align center
+    &::before
+      center-absolute()
+      
+      content ''
+      
+      z-index -1
+      
+      background-color #FD003A
+      
+      border-radius 0 40px
+
+.sell-carts__slider-slide
+  box-sizing border-box
+  padding 14px 20px
+  
+  background-color rgba(255, 255, 255, 0.7)
+  
+  border 1px solid #E5E5E5
+  border-radius 10px
+  a
+    font('Raleway', 18px, 700, #262A3C, true)
+    
+    display block
+    margin-bottom 14px
+    
+    text-align center
+  .cont
+    display flex
+    padding-left: 5.03%;
+    padding-right: 1.03%;
+    .price
+      width 200px
+      margin-left 20px
+      h3
+        font('Raleway', 18px, 500, #262A3C)
+        
+        margin-bottom 12px
+        
+        text-align center
+      p
+        font('Gotham Pro', 36px, 400, #FD003A)
+        
+        text-align center
+        span
+          margin-right 5px
+
+          font-size 45px 
+          line-height 49px
+    .weight
+      flex-grow 1
+      width 30%
+      h3
+        font('Raleway', 18px, 500, #262A3C)
+        
+        margin-bottom 5px
+        
+        text-align center
+      .weight-block
+        position relative
+
+        cursor pointer
+        &.open
+          p
+            border-radius 10px 10px 0 0
+          ul
+            display block
+        ul
+          reset-list()
+
+          position absolute
+          left 0
+          right 0
+          z-index 5
+
+          display none
+
+          background-color #FFF2ED
+
+          border-radius 0 0 10px 10px
+          li
+            font('Gotham Pro', 24px, 400, #FF6800)
+
+            padding 11px 0
+            padding-left 19px
+
+            transition 0.2s ease
+            &:last-child
+              border-radius 0 0 10px 10px
+            &:hover
+              background-color #ffdcc5
+        p
+          font('Gotham Pro', 24px, 400, #FF6800)
+
+          position relative
+
+          box-sizing border-box
+          min-height 50px
+          padding 11px 0
+          padding-left 19px
+
+          background-color #FFF2ED
+
+          border-radius 10px
+          span
+            icon(24px, 24px, #FF6800)
+
+            position absolute
+            top 0
+            right 10px
+            bottom 0
+
+            margin auto
+  .img
+    position relative
+    
+    margin-bottom 8px
+    button
+      reset-button()
+      font('Raleway', 16px, 700, #FFFFFF)
+      
+      center-absolute()
+      
+      display flex
+      flex-direction column
+      align-items center
+      width 150px
+      height 101px
+      span
+        icon(50px, 77px, #FFFFFF)
+    .icon1
+      bgs(100px, 100px)
+      bgi('coupon.svg')
+      
+      position absolute
+      top 11px
+      right 10px
+    img
+      display block
+      
+      border-radius 10px
+    &::before
+      center-absolute()
+      
+      content ''
+      
+      background-color rgba(32, 35, 56, 0.2)
+      
+      border-radius 10px
+      
+.sell-carts__slider
+  .owl-stage-outer
+    padding-bottom: 129px;
+  .owl-nav
+    display: flex;
+    justify-content: center;
+    
+    transform: translateY(-102px);
+  .owl-prev,
+  .owl-next
+    span
+      bgs(31px, 31px)
+      bgi('right-arrow.svg')
+      &::before,
+      &::after
+        display none
+  .owl-prev
+    margin-right: 180px !important;
+    &:hover
+      transform rotate(180deg)
+      span
+        bgs(31px, 31px)
+        bgi('right-arrow-sell-hover.svg')
+  .owl-next
+    &:hover
+      transform rotate(360deg) translateY(1px)
+      span
+        bgs(31px, 31px)
+        bgi('right-arrow-sell-hover.svg')
+  .owl-dots
+    box-sizing border-box
+    display flex
+    justify-content space-between
+    align-items center
+    width 150px
+    height 40px
+    margin 0 auto
+    padding 0 25px
+    
+    background-color #EAD0BF
+    
+    border-radius 0 40px
+    
+    transform: translateY(-141px);
+  .owl-dot
+    span
+      box-sizing border-box
+      display block
+      width 20px
+      height 20px
+      margin-right 20px
+
+      background-color #FFFFFF
+
+      border 6px solid transparent
+      border-radius 50%
+      &:last-child
+        margin-right 0
+    &.active
+      span
+        border-color #FD003A
+  
+  
+  
+  
+  
+  
+  
+  

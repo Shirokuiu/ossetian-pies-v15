@@ -1,0 +1,100 @@
+.popular-goods
+  padding-top 40px
+
+.popular-goods__slider-wrap
+  position relative
+  .sell-notice
+    font('Raleway', 28px, 900, #FFFFFF)
+    
+    position absolute
+    top 0
+    right 40px
+    
+    display block
+    min-width 630px
+    padding: 4px 0;
+    
+    letter-spacing 1px
+    text-align center
+    &::before
+      center-absolute()
+      
+      content ''
+      
+      z-index -1
+      
+      background-color #FD003A
+      
+      border-radius 0 40px
+
+.popular-goods__slider
+  position relative
+  .owl-stage-outer
+    padding-bottom 3px
+  .owl-nav
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 715px;
+    display flex
+    justify-content: space-between;
+    transform: translateY(-54px);
+  .owl-prev,
+  .owl-next
+    span
+      bgs(31px, 31px)
+      bgi('right-arrow.svg')
+      &::before,
+      &::after
+        display none
+  .owl-prev
+    &:hover
+      transform rotate(180deg)
+      span
+        bgs(31px, 31px)
+        bgi('right-arrow-sell-hover.svg')
+  .owl-next
+    &:hover
+      transform rotate(360deg) translateY(1px)
+      span
+        bgs(31px, 31px)
+        bgi('right-arrow-sell-hover.svg')
+  .owl-dots
+    position absolute
+    top: -74px;
+    right: 320px;
+    
+    display flex
+    width 65px
+    justify-content space-between
+    align-items center
+  .owl-dot
+    margin-right 14px
+    &:last-child
+      margin-right 0
+    span
+      display block
+      width 6px
+      height 6px
+      
+      background-color #E5E5E5
+      
+      border-radius 50%
+    &.active
+      span
+        background-color #FD003A
+    
+.popular-goods__slider-slide
+  padding-bottom 65px
+  
+@media(max-width 1670px)
+  .popular-goods__slider
+    margin-top: 84px;
+    
+  .popular-goods__slider-wrap .sell-notice
+    top: 73px;
+  
+  
+  
+  
+  

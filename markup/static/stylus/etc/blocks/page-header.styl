@@ -1,0 +1,503 @@
+.page-header
+  .b
+    padding-top 11px
+    padding-bottom 9px
+    
+    border-bottom 1px solid #FF9F00
+    .exit
+      reset-button()
+      
+      position absolute
+      top: 20px;
+      left: 17px;
+      
+      display none
+      width 35px
+      height 35px
+      
+      exit(100%, 3px, #FD003A)
+    ul
+      reset-list()
+      
+      display flex
+      justify-content space-between
+      align-items center
+      li
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          span
+            bgs(40px, 40px)
+
+            margin-right 11px
+          p
+            font('Raleway', 18px, 500, #262A3C)
+        &:nth-child(1)
+          a
+            span
+              bgs(50px, 50px)
+              bgi('meat.svg')
+        &:nth-child(2)
+          a
+            span
+              bgi('chicken.svg')
+        &:nth-child(3)
+          a
+            span
+              bgs(42px, 42px)
+              bgi('cabbage.svg')
+        &:nth-child(4)
+          a
+            span
+              bgi('cheese.svg')
+        &:nth-child(5)
+          a
+            span
+              bgi('french-fries.svg')
+        &:nth-child(6)
+          a
+            span
+              bgi('fishing.svg')
+        &:nth-child(7)
+          a
+            span
+              bgi('lemon.svg')
+        &:nth-child(8)
+          a
+            span
+              bgi('broccoli.svg')
+        &:nth-child(9)
+          a
+            span
+              bgi('mountain.svg')
+  .m
+    padding 10px 0
+    
+    background-color #FFF2ED
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    .container
+      display flex
+      align-items center
+      .btn
+        reset-button()
+        
+        display none
+        width 30px
+        height 30px
+        .icon
+          display flex
+          width 30px
+          height 30px
+          
+          fill #ff6800
+      .logo
+        position relative
+        
+        box-sizing border-box
+        display flex
+        align-items center
+        width 400px
+        margin-right: 4.92%;
+        padding-left 25px
+        &::before
+          bgs(400px, 40px)
+          bgi('logo-line.svg')
+          
+          content ''
+          
+          position absolute
+          top 19px
+          left 0
+          z-index 1
+        .text
+          position relative
+          z-index 2
+          
+          align-self: flex-end;
+          
+          transform: translateY(-7px);
+          p
+            font('Raleway', 14px, 700, #FF6800)
+          h2
+            font('Raleway', 28px, 900, #FFFFFF)
+            
+            margin-bottom 5px
+            
+            letter-spacing 1px
+        .image
+          position relative
+          z-index 2
+          
+          width 80px
+          margin-right 7px
+      .tel
+        display flex
+        margin-left: 1.92%;
+        a
+          font('SFUIDisplay', 24px, 400, #262A3C, true)
+        span
+          display block
+          width 24px
+          height 24px
+          margin-right 11px
+          .icon
+            display block
+            width 24px
+            height 24px
+            
+            fill #262A3C
+      .basket
+        margin-left: 2.08%;
+        a
+          position relative
+          
+          display flex
+          justify-content center
+          align-items center
+          width 60px
+          height 60px
+
+          text-decoration none
+          
+          background-color #56C225
+          
+          border-radius 50%
+          .count
+            font('SFUIDisplay', 13px, 400, #FFFFFF)
+            
+            position absolute
+            top: -6px;
+            right: -15px;
+            
+            box-sizing border-box
+            display block
+            width 31px
+            height 31px
+            
+            text-align center
+            line-height 24px
+            
+            background-color #56C225
+            
+            border 3px solid #FFF2ED
+            border-radius 50%
+          .itm
+            display block
+            width 32px
+            height 32px
+            .icon
+              display block
+              width 32px
+              height 32px
+              
+              fill #FFFFFF
+      .inf
+        reset-list()
+        
+        flex-grow 1
+        display flex
+        justify-content space-between
+        width 50%
+        li
+          a
+            display flex
+            flex-direction column
+            align-items center
+            
+            text-decoration none
+            p
+              font('Raleway', 24px, 600, #EAB28D)
+              
+              transition 0.2s ease
+            span
+              display block
+              width 32px
+              height 32px
+              margin-bottom 8px
+              .icon
+                display block
+                width 32px
+                height 32px
+
+                fill #EAB28D
+                
+                transition 0.2s ease
+            &:hover
+              p
+                color #FF6800
+              span
+                .icon
+                  fill #FF6800
+          &.sell
+            a
+              p
+                color #FD003A
+              span
+                .icon
+                  fill #FD003A
+  .t
+    padding-top 10px
+    padding-bottom 12px
+    .container
+      box-sizing: border-box;
+      padding-left: 2.92%;
+      ul
+        reset-list()
+        
+        display flex
+        justify-content space-between
+        li
+          display flex
+          align-items center
+          p
+            font('Raleway', 18px, 400, #262A3C)
+          &:nth-child(1)
+            p
+              border-bottom 1px dashed #90929D
+          span
+            display block
+            width 28px
+            height 28px
+            margin-right 5px
+            .icon
+              display block
+              width 28px
+              height 28px
+              
+              fill #90929D
+              
+@media(max-width 1750px)
+  .page-header .m .container .logo
+    margin-right: 0.92%;
+    padding-left: 10px;
+    width: 378px;
+    
+  .page-header .m .container .logo::before
+    width: 378px;
+    background-size: 378px 40px;
+    
+  .page-header .m .container .basket
+    margin-left: 1%;
+    
+  .page-header .m .container .tel
+    margin-left: 1%;
+    
+@media(max-width 1470px)
+  .page-header .t .container ul li span
+    width: 18px;
+    height: 18px;
+    
+  .page-header .t .container ul li span .icon
+    width: 18px;
+    height: 18px;
+    
+  .page-header .t .container ul li p
+    font-size: 14px;
+    line-height: 18px;
+    
+  .page-header .m .container .logo
+    width: 318px;
+    
+  .page-header .m .container .logo::before
+    width: 288px;
+    background-size: 285px 28px;
+    top: 12px;
+    
+  .page-header .m .container .logo .image
+    width: 60px;
+    
+  .page-header .m .container .logo .text h2
+    font-size: 20px;
+    line-height: 24px;
+    
+  .page-header .m .container .logo .text p
+    font-size: 13px;
+    line-height: 17px;
+    
+  .page-header .m .container .inf li a span
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+    
+  .page-header .m .container .inf li a span .icon
+    width: 24px;
+    height: 24px;
+    
+  .page-header .m .container .inf li a p
+    font-size: 18px;
+    line-height: 22px;
+    
+  .page-header .m .container .basket a
+    width: 50px;
+    height: 50px;
+    
+  .page-header .m .container .basket a .itm
+    width: 24px;
+    height: 24px;
+    
+  .page-header .m .container .basket a .itm .icon
+    width: 24px;
+    height: 24px;
+    
+  .page-header .m .container .tel span
+    display: none;
+    
+  .page-header .m .container .tel a
+    font-size: 19px;
+    line-height: 23px;
+    
+  .page-header .b ul li a span
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    
+  .page-header .b ul li:nth-child(1) a span
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    
+  .page-header .b ul li:nth-child(3) a span
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    
+  .page-header .b ul li a p
+    font-size: 15px;
+    line-height: 19px;
+    
+@media(max-width 1160px)
+  .page-header .m .container
+    flex-direction: column;
+    position: relative;
+    
+  .page-header .m .container .logo
+    margin-right: 0;
+    margin-bottom: 12px;
+    
+  .page-header .m .container .inf
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    
+  .page-header .m .container .basket
+    margin-left: 0;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    
+  .page-header .m .container .tel
+    margin-left: 0;
+    
+  .page-header .b
+    .container
+      padding: 0 10px;
+      
+  .page-header .b ul li a span
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    
+  .page-header .b ul li:nth-child(1) a span
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    
+  .page-header .b ul li:nth-child(3) a span
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    
+@media(max-width 1030px)
+  .page-header .t
+    display none
+    
+@media(max-width 1000px)
+  .page-header
+    padding-top: 63px;
+    
+  .page-header .m
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    
+  .page-header .m .container .btn
+    display block
+    
+  .page-header .m .container
+    flex-direction: row;
+    
+  .page-header .m .container .logo
+    margin-bottom: 0;
+    
+  .page-header .m .container .inf
+    display: none;
+    
+  .page-header .m .container .tel
+    margin: 0 auto;
+    
+  .page-header .b
+    display: none;
+    
+  .page-header .m .container .basket
+    position: static;
+    order: 1;
+    
+  .page-header .b
+    position relative
+    &.open
+      display: flex;
+      flex-direction: column;
+      background-color: #fff2ed;
+      border-bottom: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      
+  .page-header .b .container
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  
+  .page-header .b .container nav
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+  .page-header .b ul
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    
+  .page-header .b ul li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+  .page-header .b ul li a p
+    font-size: 20px;
+    line-height: 24px;
+    
+  .page-header .b .exit
+    display block
+  
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              

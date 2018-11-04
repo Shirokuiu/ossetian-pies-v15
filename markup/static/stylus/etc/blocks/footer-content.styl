@@ -1,0 +1,303 @@
+.footer-content
+  padding-top 28px
+  padding-bottom 41px
+  
+  background-color #807361
+  .b
+    .container
+      display flex
+      justify-content space-between
+      align-items center
+      .ym
+        width 88px
+      .dev
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          p
+            font('Raleway', 16px, 500, #CAB498)
+            
+            margin-right 8px
+          span
+            bgs(130px, 36px)
+            bgi('esst.svg')
+  .m
+    margin-bottom 50px
+    padding 15px 0
+    
+    border-top 1px solid #A3927B
+    border-bottom 1px solid #A3927B
+    .container
+      ul
+        reset-list()
+        
+        display flex
+        justify-content space-between
+        padding-left: 2.59%;
+        li
+          display flex
+          align-items center
+          span
+            icon(28px, 28px, #CAB498)
+            
+            margin-right 12px
+          p
+            font('Raleway', 18px, 400, #CAB498)
+          &:nth-child(1),
+          &:nth-child(4)
+            span
+              .icon
+                fill #ffffff
+            p
+              color #ffffff
+          &:nth-child(3)
+            position relative
+            
+            padding-right: 176px;
+            &::before,
+            &::after
+              content ''
+              
+              position absolute
+              top 0
+              bottom 0
+              
+              margin auto
+            &::before
+              bgs(60px, 60px)
+              bgi('mastercard.svg')
+              
+              right 97px
+            &::after
+              bgs(80px, 80px)
+              bgi('visa.svg')
+              
+              right 0
+  .t
+    margin-bottom 70px
+    .container
+      display flex
+      align-items center
+    .tel
+      display flex
+      align-items center
+      margin-left: 4.21%;
+      span
+        icon(24px, 24px, #FFFFFF)
+        
+        margin-right 12px
+      a
+        font('SFUIDisplay', 28px, 700, #FFFFFF, true)
+    .info
+      reset-list()
+      
+      flex-grow 1
+      display flex
+      justify-content space-between
+      width 30%
+      li
+        a
+          display flex
+          flex-direction column
+          align-items center
+          
+          text-decoration none
+          p
+            font('Raleway', 24px, 600, #CAB498)
+            
+            transition 0.2s ease
+          span
+            display block
+            width 32px
+            height 32px
+            margin-bottom 8px
+            .icon
+              display block
+              width 32px
+              height 32px
+
+              fill #CAB498
+              
+              transition 0.2s ease
+          &:hover
+            p
+              color #ffffff
+            span
+              .icon
+                fill #ffffff
+    .logo
+      position relative
+      
+      display flex
+      margin-right: 6.399%;
+      padding-left 25px
+      &::before
+        bgs(400px, 40px)
+        bgi('logo-line-footer.svg')
+        
+        content ''
+        
+        position absolute
+        top 21px
+        left 0
+        z-index 1
+      .img
+        position relative
+        z-index 2
+        
+        width 80px
+        margin-right 7px
+      .text
+        position relative
+        z-index 2
+        
+        margin-top 25px
+        ul
+          reset-list()
+          
+          display flex
+          justify-content center
+          li
+            margin-right 4px
+            &:last-child
+              margin-right 0
+            a
+              bgs(24px, 24px)
+              
+              text-decoration none
+              
+              background-color #ffffff
+            &:nth-child(1)
+              a
+                bgi('vk.svg')
+            &:nth-child(2)
+              a
+                bgi('fb.svg')
+            &:nth-child(3)
+              a
+                bgi('od.svg')
+            &:nth-child(4)
+              a
+                bgi('g.svg')
+            &:nth-child(5)
+              a
+                bgi('tw.svg')
+            &:nth-child(6)
+              a
+                bgi('v.svg')
+            &:nth-child(7)
+              a
+                bgi('wa.svg')
+        h2
+          font('Raleway', 28px, 900, #FFFFFF)
+          
+          margin-bottom 7px
+          
+          letter-spacing 1px
+        p
+          font('Raleway', 14px, 700, #FFFFFF)
+          
+          margin-bottom 8px
+          
+@media(max-width 1450px)
+  .footer-content .t .logo
+    margin-right: 2%;
+    
+  .footer-content .t .logo::before
+    width: 325px;
+    background-size: 325px 40px;
+    
+  .footer-content .t .logo .img
+    width: 60px;
+    transform: translateY(12px);
+    
+  .footer-content .t .logo .text h2
+    font-size: 22px;
+    line-height: 26px;
+    
+  .footer-content .t .logo .text p
+    font-size: 12px;
+    line-height: 16px;
+    
+  .footer-content .t .info li a span
+    width: 24px;
+    height: 24px;
+    
+  .footer-content .t .info li a span .icon
+    width: 24px;
+    height: 24px;
+    
+  .footer-content .t .info li a p
+    font-size: 18px;
+    line-height: 22px;
+    
+  .footer-content .t .tel
+    margin-left: 1%;
+    
+  .footer-content .t .tel span
+    display: none;
+    
+  .footer-content .t .tel a
+    font-size: 20px;
+    line-height: 24px;
+    
+  .footer-content .m .container ul
+    flex-wrap: wrap;
+    
+  .footer-content .m .container ul li
+    width 40%
+    margin-bottom: 15px;
+    &:last-child
+      margin-bottom 0
+    
+  .footer-content .m .container ul li:nth-child(3)
+    padding-right: 0px;
+    
+@media(max-width 1200px)
+  .footer-content .t
+    margin-bottom: 40px;
+    
+  .footer-content .t .container
+    flex-wrap: wrap;
+    
+  .footer-content .t .logo
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+  .footer-content .t .info
+    width: 100%;
+    flex-grow: 0;
+    margin-bottom: 35px;
+    
+  .footer-content .t .tel
+    margin: 0 auto;
+    
+  .footer-content .m .container ul
+    padding-left: 0;
+    flex-direction: column;
+    
+  .footer-content .m .container ul li
+    width: 100%;
+    
+  .footer-content .m .container ul li:nth-child(3)::before
+    left: 306px;
+    right: auto;
+    
+  .footer-content .m .container ul li:nth-child(3)::after
+    right: auto;
+    left: 386px;
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
